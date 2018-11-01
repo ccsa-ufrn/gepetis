@@ -1,0 +1,11 @@
+.aboutHeader{
+  background: linear-gradient(90deg,#a5d6a7 0.5%, white);
+  padding:5px;
+  margin:-22px;
+}
+
+.sectionHeader{
+  background: linear-gradient(90deg,#a5d6a7 0.5%, white);
+  color:#0F3121;
+}
+

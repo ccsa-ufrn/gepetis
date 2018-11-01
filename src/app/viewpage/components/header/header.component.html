@@ -1,42 +1,46 @@
 <div class="row">
-  <div class="top"> ACESSAR</div>
-  <div class="col-s12 full">12312</div>
-  <!-- Dropdown Structure -->
-  <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-  <nav class="nav-center" role="navigation">
-    <div class="nav-wrapper  container ">
-      <ul class=" hide-on-med-and-down">
-        <li><a routerLink="/capa">Capa</a></li>
-        <li><a routerLink="/sobre">Sobre</a></li>
-        <li><a routerLink="/cadastro">Cadastro</a></li>
-        <!-- Dropdown Trigger -->
-        <li><a mz-button id="btn-dropdown-demo" href="#">Dropdown</a></li>
-      </ul>
+  <div class="top col s12">
+    <div class="col s3 offset-s8">
+        <div>
+            <a class=" border" routerLink="/login" mz-button flat="true">
+              Acessar
+            </a>
+          </div>
     </div>
-  </nav>
+  </div>
+  <div class="col s12 full">12312</div>
+  <div class="col s12 navbar">
+    <nav class="">
+      <div class="nav-wrapper  ">
+        <ul class=" hide-on-med-and-down menuList">
+          <li><a routerLink="/capa">Capa</a></li>
+          <li><a routerLink="/sobre">Sobre</a></li>
+          <li><a routerLink="/cadastro">Cadastro</a></li>
+          <!-- Dropdown Trigger -->
+          <li><a mz-button id="btn-dropdown-demo" class="background-none border-white" href="#">Edições Anterirores</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
-</div>
-<mz-dropdown
-[id]="'dropdown-demo'"
-[align]="'left'"
-[belowOrigin]="false"
-[constrainWidth]="true"
-[dropdownButtonId]="'btn-dropdown-demo'"
-[gutter]="true"
-[hover]="true"
-[inDuration]="300"
-[outDuration]="300"
-[stopPropagation]="true"
->
-<mz-dropdown-item><a href="#!">GEPETIS 2018</a></mz-dropdown-item>
-<mz-dropdown-item><a href="#!">GEPETIS 2017</a></mz-dropdown-item>
-<mz-dropdown-divider></mz-dropdown-divider>
-<mz-dropdown-item><a href="#!">Ver Mais</a></mz-dropdown-item>
-</mz-dropdown>
+  <mz-dropdown
+  [id]="'dropdown-demo'"
+  [align]="'left'"
+  [belowOrigin]="false"
+  [constrainWidth]="true"
+  [dropdownButtonId]="'btn-dropdown-demo'"
+  [gutter]="true"
+  [hover]="true"
+  [inDuration]="300"
+  [outDuration]="300"
+  [stopPropagation]="true"
+  >
+  <mz-dropdown-item><a routerLink="#!">GEPETIS 2018</a></mz-dropdown-item>
+  <mz-dropdown-item><a href="#!">GEPETIS 2017</a></mz-dropdown-item>
+  <mz-dropdown-divider></mz-dropdown-divider>
+  <mz-dropdown-item><a href="#!">Ver Mais</a></mz-dropdown-item>
+  </mz-dropdown>
 
 
+
+  </div>

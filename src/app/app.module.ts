@@ -19,6 +19,9 @@ import { ViewpageModule } from './viewpage/viewpage.module'
 import { DashboardModule } from './dashboard/dashboard.module'
 import { ComponentsModule } from './viewpage/components/components.module'
 
+import { UtilsModule} from './utils/utils.module'
+
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -37,8 +40,8 @@ import { RegisterComponent } from './register/register.component';
     BrowserAnimationsModule,
     ViewpageModule,
     ComponentsModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    UtilsModule
   ],
   providers: [
     AuthGuard,

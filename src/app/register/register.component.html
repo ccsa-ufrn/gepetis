@@ -1,3 +1,97 @@
-<p>
-  register works!
-</p>
+<div class="sectionHeader">
+  <h5>Usuário</h5>
+</div>
+<div class="row">
+  <div class="col s6">
+      <mz-input-container>
+          <i mz-icon-mdi mz-input-prefix
+            [icon]="'account'">
+          </i>
+          <input mz-input
+            [label]="'Usuário'"
+            [validate]="true"
+            [dataError]="'Email is invalid'"
+            [dataSuccess]="'Email is valid'"
+            id="email-input"
+            placeholder="Enter your email"
+            formControlName="UsuarioLogin"
+          >
+        </mz-input-container>
+
+  </div>
+</div>
+<div class="row">
+    <div class="col s6">
+        <mz-input-container>
+            <i mz-icon-mdi mz-input-prefix
+              [icon]="'textbox-password'">
+            </i>
+            <input mz-input
+              [label]="'Senha'"
+              [validate]="true"
+              [dataError]="'Senha Válida'"
+              [dataSuccess]="'Senha Válida'"
+              id="email-input"
+              placeholder="Enter your email"
+              type="password">
+          </mz-input-container>
+
+    </div>
+  </div>
+  <div class="row">
+      <div class="col s6">
+          <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix
+                [icon]="'textbox-password'">
+              </i>
+              <input mz-input
+                [label]="'Repetir Senha'"
+                [validate]="true"
+                [dataError]="'Email is invalid'"
+                [dataSuccess]="'Email is valid'"
+                id="email-input"
+                placeholder="Enter your email"
+                type="email">
+            </mz-input-container>
+
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="col s6">
+          <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix
+                [icon]="'email'">
+              </i>
+              <input mz-input
+                [label]="'Email'"
+                [validate]="true"
+                [dataError]="'Email is invalid'"
+                [dataSuccess]="'Email is valid'"
+                id="email-input"
+                placeholder="Enter your email"
+                length="150"
+                type="email">
+            </mz-input-container>
+
+      </div>
+    </div>
+    <div class="sectionHeader">
+        <h5>Dados Pessoais</h5>
+      </div>
+      <div class="row">
+          <div class="col s6">
+              <mz-input-container>
+                  <i mz-icon-mdi mz-input-prefix
+                    [icon]="'account'">
+                  </i>
+                  <input mz-input
+                    [label]="'Nome Completo'"
+                    id="email-input"
+                    placeholder="Enter your email"
+                    >
+                </mz-input-container>
+          </div>
+      </div>
+
+

@@ -1,18 +1,48 @@
 .full{
-  width: 100vw;
+  display: flex;
+
+  justify-content: center;
   height: 300px;
   background: #76bd9e;
-  margin:0;
+
 }
 .top{
-  width: 100vw;
-  height: 30px;
+
+  height: 36px;
   background: #369369;
   margin:0;
 }
-.nav-wrapper{
+.navbar{
   background: #369369;
 }
+
 nav{
   background: #369369;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul .menuList{
+
+}
+p{
+  padding:0;
+  margin: 0;
+}
+.btn-flat {
+  box-shadow: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: background-color .2s;
+  border: 1px solid white;
+}
+/* // CSS UTILS */
+.background-none{
+  background: none;
+}
+.border-white{
+  border: 2px solid white !important;
+  box-shadow: none;
 }
