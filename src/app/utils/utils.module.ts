@@ -6,7 +6,7 @@ import { MzButtonModule } from 'ngx-materialize'// button
 import { MzInputModule } from 'ngx-materialize'//input
 import { MzIconMdiModule } from 'ngx-materialize'//input
 import { MzSelectModule } from 'ngx-materialize'
-
+import { MzRadioButtonModule } from 'ngx-materialize'
 @NgModule({
   imports: [
     CommonModule,
@@ -15,9 +15,10 @@ import { MzSelectModule } from 'ngx-materialize'
     MzButtonModule,
     MzInputModule,
     MzIconMdiModule,
-    MzSelectModule
+    MzSelectModule,
+    MzRadioButtonModule
   ],
   declarations: [],
-  exports:[RouterModule,MzDropdownModule,MzButtonModule,MzInputModule,MzIconMdiModule,MzSelectModule]
+  exports:[RouterModule,MzDropdownModule,MzButtonModule,MzInputModule,MzIconMdiModule,MzSelectModule,MzRadioButtonModule]
 })
 export class UtilsModule { }

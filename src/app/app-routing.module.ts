@@ -29,6 +29,13 @@ const routes: Routes = [
 },
 { path: 'login', component: LoginComponent },
 
+{ path: 'painel', component: IndexDComponent,
+children: [
+  { path: '', component: CoverComponent },
+]
+ },
+
+
 // { path: 'register', component:  },
 
 // otherwise redirect to home

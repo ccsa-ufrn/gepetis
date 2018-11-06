@@ -6,7 +6,7 @@
   <h5>Usuário</h5>
 </div>
 <div class="row formSection ">
-  <div class="col s6">
+  <div class="col s4">
       <mz-input-container>
           <i mz-icon-mdi mz-input-prefix
             [icon]="'account'">
@@ -23,7 +23,7 @@
         </mz-input-container>
 
   </div>
-  <div class="col s6">
+  <div class="col s4">
       <mz-input-container>
           <i mz-icon-mdi mz-input-prefix
             [icon]="'email'">
@@ -41,7 +41,7 @@
 </div>
 </div>
 <div class="row">
-    <div class="col s6">
+    <div class="col s4">
         <mz-input-container>
             <i mz-icon-mdi mz-input-prefix
               [icon]="'textbox-password'">
@@ -56,7 +56,7 @@
               type="password">
           </mz-input-container>
     </div>
-    <div class="col s6">
+    <div class="col s4">
         <mz-input-container>
             <i mz-icon-mdi mz-input-prefix
               [icon]="'textbox-password'">
@@ -77,35 +77,111 @@
         <h5>Dados Pessoais</h5>
       </div>
       <div class="row formSection">
-          <div class="col s6">
+          <div class="col s4">
               <mz-input-container>
                   <i mz-icon-mdi mz-input-prefix
                     [icon]="'account'">
                   </i>
                   <input mz-input
-                    [label]="'Nome Completo'"
+                    [label]="'Nome '"
+                    id="email-input"
+                    placeholder="Enter your email"
+                    >
+                </mz-input-container>
+          </div>
+          <div class="col s4">
+              <mz-input-container>
+                  <i mz-icon-mdi mz-input-prefix
+                    [icon]="'account'">
+                  </i>
+                  <input mz-input
+                    [label]="'Nome do Meio'"
                     id="email-input"
                     placeholder="Enter your email"
                     >
                 </mz-input-container>
           </div>
       </div>
-<div class="row">
-    <mz-select-container
-    inline="true"
-    >
-    <p>Sexo:</p>
-        <select mz-select
-          id="options-select"
-          [placeholder]="'Selecione'"
-        >
-          <optgroup label="Group 1">
-            <option  class="left circle">Masculino</option>
-            <option  class="left circle">Feminino</option>
-          </optgroup>
-        </select>
-      </mz-select-container>
-</div>
+      <div class="row">
+      <div class="col s4">
+          <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix
+                [icon]="'account'">
+              </i>
+              <input mz-input
+                [label]="'Sobrenome'"
+                id="email-input"
+                placeholder="Enter your email"
+                >
+            </mz-input-container>
+      </div>
+          <div class="col s4">
+              <mz-select-container
+              inline="true"
+              >
+                  <select mz-select
+                    id="options-select"
+                    [placeholder]="'Selecione o Sexo:'"
+                  >
+                      <option  class="left circle">Masculino</option>
+                      <option  class="left circle">Feminino</option>
+                  </select>
 
+                </mz-select-container>
+          </div>
+        </div>
+      <div class="row">
+          <div class="col s4">
+              <mz-input-container>
+                  <i mz-icon-mdi mz-input-prefix
+                    [icon]="'account'">
+                  </i>
+                  <input mz-input
+                    [label]="'Instituição'"
+                    id="email-input"
+                    placeholder="Enter your email"
+                    >
+                </mz-input-container>
+          </div>
+          <div class="col s4">
+              <mz-select-container
+              inline="true"
+              >
+
+                  <select mz-select
+                    id="options-select2"
+                    [placeholder]="'Selecione o País'"
+                  >
+                      <option  class="left circle">Brasil</option>
+                      <option  class="left circle">Inglaterra</option>
+                  </select>
+
+                </mz-select-container>
+          </div>
+       </div>
+      <div class="row">
+
+        </div>
+
+
+
+       <div class="row">
+          <mz-radio-button-container>
+              <input mz-radio-button
+                [label]="'Aceito os termos de serviço'"
+                [withGap]="true"
+                id="radio-button-id"
+                name="radio-group"
+                type="radio">
+            </mz-radio-button-container>
+       </div>
+       <div class="row">
+          <div class="left">
+              <button mz-button
+              disabled="true">
+                Cadastrar
+              </button>
+            </div>
+       </div>
 
 </form>

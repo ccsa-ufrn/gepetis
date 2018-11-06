@@ -39,6 +39,7 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ViewpageModule,
+    DashboardModule,
     ComponentsModule,
     ReactiveFormsModule,
     UtilsModule
