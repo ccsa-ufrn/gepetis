@@ -1,7 +1,11 @@
+<div class="registerHeader center-align ">
+  <h5>Registre-se</h5>
+</div>
+<form [formGroup]="profileForm">
 <div class="sectionHeader">
   <h5>Usuário</h5>
 </div>
-<div class="row">
+<div class="row formSection ">
   <div class="col s6">
       <mz-input-container>
           <i mz-icon-mdi mz-input-prefix
@@ -13,12 +17,28 @@
             [dataError]="'Email is invalid'"
             [dataSuccess]="'Email is valid'"
             id="email-input"
-            placeholder="Enter your email"
-            formControlName="UsuarioLogin"
+            placeholder="Digite seu Usuário"
+            formControlName="User"
           >
         </mz-input-container>
 
   </div>
+  <div class="col s6">
+      <mz-input-container>
+          <i mz-icon-mdi mz-input-prefix
+            [icon]="'email'">
+          </i>
+          <input mz-input
+            [label]="'Email'"
+            [validate]="true"
+            [dataError]="'Email is invalid'"
+            [dataSuccess]="'Email is valid'"
+            id="email-input"
+            placeholder="Enter your email"
+            length="150"
+            type="email">
+        </mz-input-container>
+</div>
 </div>
 <div class="row">
     <div class="col s6">
@@ -35,51 +55,28 @@
               placeholder="Enter your email"
               type="password">
           </mz-input-container>
-
+    </div>
+    <div class="col s6">
+        <mz-input-container>
+            <i mz-icon-mdi mz-input-prefix
+              [icon]="'textbox-password'">
+            </i>
+            <input mz-input
+              [label]="'Repetir Senha'"
+              [validate]="true"
+              [dataError]="'Email is invalid'"
+              [dataSuccess]="'Email is valid'"
+              id="email-input"
+              placeholder="Enter your email"
+              type="email">
+          </mz-input-container>
     </div>
   </div>
-  <div class="row">
-      <div class="col s6">
-          <mz-input-container>
-              <i mz-icon-mdi mz-input-prefix
-                [icon]="'textbox-password'">
-              </i>
-              <input mz-input
-                [label]="'Repetir Senha'"
-                [validate]="true"
-                [dataError]="'Email is invalid'"
-                [dataSuccess]="'Email is valid'"
-                id="email-input"
-                placeholder="Enter your email"
-                type="email">
-            </mz-input-container>
-
-      </div>
-    </div>
-
-  <div class="row">
-      <div class="col s6">
-          <mz-input-container>
-              <i mz-icon-mdi mz-input-prefix
-                [icon]="'email'">
-              </i>
-              <input mz-input
-                [label]="'Email'"
-                [validate]="true"
-                [dataError]="'Email is invalid'"
-                [dataSuccess]="'Email is valid'"
-                id="email-input"
-                placeholder="Enter your email"
-                length="150"
-                type="email">
-            </mz-input-container>
-
-      </div>
-    </div>
+      <!-- SESSÃO DADOS PESSOAIS -->
     <div class="sectionHeader">
         <h5>Dados Pessoais</h5>
       </div>
-      <div class="row">
+      <div class="row formSection">
           <div class="col s6">
               <mz-input-container>
                   <i mz-icon-mdi mz-input-prefix
@@ -93,5 +90,22 @@
                 </mz-input-container>
           </div>
       </div>
+<div class="row">
+    <mz-select-container
+    inline="true"
+    >
+    <p>Sexo:</p>
+        <select mz-select
+          id="options-select"
+          [placeholder]="'Selecione'"
+        >
+          <optgroup label="Group 1">
+            <option  class="left circle">Masculino</option>
+            <option  class="left circle">Feminino</option>
+          </optgroup>
+        </select>
+      </mz-select-container>
+</div>
 
 
+</form>

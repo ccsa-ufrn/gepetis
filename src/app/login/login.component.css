@@ -1,0 +1,62 @@
+.full{
+ background:#369369;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.center-box{
+  background:#76bd9e;
+  padding:100px;
+}
+.full>*:first-child {
+  align-self: stretch;
+  /* margin-left:2rem; */
+  position: absolute;
+  color:#0F3121;
+}
+.loginBtn{
+  margin-left:8%;
+  position: absolute;
+}
+.colorIcon{
+  color:#0F3121;
+
+}
+
+
+
+  input:not([type]),
+  input[type=text]:not(.browser-default),
+  input[type=text]:not(.browser-default),
+  input[type=password]:not(.browser-default),
+   input[type=email]:not(.browser-default),
+    input[type=url]:not(.browser-default),
+     input[type=time]:not(.browser-default),
+      input[type=date]:not(.browser-default),
+       input[type=datetime]:not(.browser-default),
+        input[type=datetime-local]:not(.browser-default),
+        input[type=tel]:not(.browser-default),
+        input[type=number]:not(.browser-default),
+        input[type=search]:not(.browser-default),
+        textarea.materialize-textarea +:focus{
+          border-bottom: 1px solid #0F3121;
+
+
+
+  }
+  .input-field label{
+  color: #0F3121 !important;
+}
+   /* label focus color */
+   .input-field input:focus + label {
+    color: #0F3121 !important;
+
+  }.input-field input:focus {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+  }
+
+  .input-field .prefix.active {
+    color:white;
+  }

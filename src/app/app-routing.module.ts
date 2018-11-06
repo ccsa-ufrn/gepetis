@@ -21,12 +21,10 @@ const routes: Routes = [
   path: '', component: IndexComponent, canActivate: [AuthGuard],
   children: [
     { path: '', component: CoverComponent },
-    { path: 'sobre', component: AboutComponent,
-  children:[
+    { path: 'sobre', component: AboutComponent},
+    { path: 'cadastro', component: RegisterComponent },
+    { path: 'events', component: EventsComponent }
 
-  ] },
-    { path: 'cadastro', component: RegisterComponent }
-    ,
   ]
 },
 { path: 'login', component: LoginComponent },

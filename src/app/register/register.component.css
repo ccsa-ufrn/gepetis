@@ -3,9 +3,13 @@
   color:#0F3121;
 }
 
-.aboutHeader{
+.registerHeader{
   background: linear-gradient(90deg,#a5d6a7 0.5%, white);
   padding:5px;
   margin:-22px;
 }
 
+.col{
+  padding-top:2rem;
+  padding-bottom:3rem;
+}
