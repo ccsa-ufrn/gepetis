@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* CSS GEPETIS FRAMEWORK */
+ /* Fonte cor verde principal color:#0F3121; */
+.font-green-color{
+  color:#0F3121;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
