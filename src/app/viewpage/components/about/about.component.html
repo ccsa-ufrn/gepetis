@@ -1,3 +1,16 @@
+
+<form [formGroup]="teste">
+    <editor apiKey="test"
+    formControlName="text"
+
+    (onSubmit)="teste2($event)"
+    [init]="{plugins: 'link'}"></editor>
+
+    <button type="submit">editar</button>
+
+</form>
+<div class="result" [innerHTML]="this.teste.text" > Inner</div>
+
 <div class="aboutHeader center-align ">
   <h5>Sobre o Evento</h5>
 </div>

@@ -5,8 +5,12 @@ import { MzDropdownModule } from 'ngx-materialize'// dropdown
 import { MzButtonModule } from 'ngx-materialize'// button
 import { MzInputModule } from 'ngx-materialize'//input
 import { MzIconMdiModule } from 'ngx-materialize'//input
-import { MzSelectModule } from 'ngx-materialize'
-import { MzRadioButtonModule } from 'ngx-materialize'
+import { MzSelectModule } from 'ngx-materialize' //select
+import { MzRadioButtonModule } from 'ngx-materialize' //radio button
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditorModule } from '@tinymce/tinymce-angular';// mde editor de texto grande
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,9 +20,13 @@ import { MzRadioButtonModule } from 'ngx-materialize'
     MzInputModule,
     MzIconMdiModule,
     MzSelectModule,
-    MzRadioButtonModule
+    MzRadioButtonModule,
+    EditorModule,
+    ReactiveFormsModule
+
   ],
   declarations: [],
-  exports:[RouterModule,MzDropdownModule,MzButtonModule,MzInputModule,MzIconMdiModule,MzSelectModule,MzRadioButtonModule]
+  exports:[RouterModule,MzDropdownModule,MzButtonModule,MzInputModule,MzIconMdiModule,
+    MzSelectModule,MzRadioButtonModule,EditorModule, ReactiveFormsModule]
 })
 export class UtilsModule { }
