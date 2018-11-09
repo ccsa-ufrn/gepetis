@@ -7,7 +7,8 @@ import {DashComponentsModule} from './dash-components/dash-components.module';
 @NgModule({
   imports: [
     CommonModule,
-    UtilsModule
+    UtilsModule,
+    DashComponentsModule
 
   ],
   declarations: [IndexDComponent],

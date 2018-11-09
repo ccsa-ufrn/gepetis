@@ -5,10 +5,12 @@ import { EditCoverComponent } from './edit-cover/edit-cover.component';
 import { EditEventsComponent } from './edit-events/edit-events.component';
 import { EditSubmissionsComponent } from './edit-submissions/edit-submissions.component';
 import { EditUsersComponent } from './edit-users/edit-users.component';
+import { UtilsModule } from '../../utils/utils.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    UtilsModule
   ],
   declarations: [EditAboutComponent, EditCoverComponent, EditEventsComponent, EditSubmissionsComponent, EditUsersComponent],
   exports:[EditAboutComponent]
