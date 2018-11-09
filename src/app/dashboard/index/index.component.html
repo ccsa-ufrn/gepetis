@@ -1,4 +1,5 @@
 <div class="full">
+
   <div class="row header ">
     <div class="col s2 green lighten-2 sideMenu">
       <div class="row sideHeader">
@@ -8,16 +9,65 @@
       </div>
       <div class="sideContainer flex-center">
         <ul class="font-green-color">
-          <li>Submissões</li>
-          <li><a id="btn-dropdown-demo" href="#">Páginas</a></li>
-          <li>Usuários</li>
-          <li>Outros</li>
-          <li><a routerLink=" ">Sair</a> </li>
+          <li><a
+            mz-icon-mdi
+            [align]="'left'"
+            [icon]="'clipboard-text-outline'"
+            [size]="'24px'"
+            routerLink="editar-capa"> Submissões</a></li>
+          <li><a
+            mz-icon-mdi
+            [align]="'left'"
+            [icon]="'page-next-outline'"
+            [size]="'24px'"
+             id="btn-dropdown-demo">
+             Páginas</a>
+            </li>
+          <li><a
+            mz-icon-mdi
+            [align]="'left'"
+            [icon]="'account-multiple-outline'"
+            [size]="'24px'"> Usuários</a></li>
+          <li><a
+            mz-icon-mdi
+            [align]="'left'"
+            [icon]="'page-next-outline'"
+            [size]="'24px'"
+            href=""> Outros</a> </li>
+          <li><a
+            mz-icon-mdi
+            [align]="'left'"
+            [icon]="'exit-to-app'"
+            [size]="'24px'"
+            routerLink=" "> Sair</a> </li>
         </ul>
       </div>
     </div>
     <div class="col s10 right-content white">
-      <div class="row contentHeader"></div>
+      <div class="row contentHeader">
+        <div class="col s4 offset-s8">
+          <div class="profileAvatar col s6 ">
+              <i mz-icon-mdi
+              class="white-text"
+              [icon]="'account-circle'"
+              [size]="'36px'">
+            </i>
+          </div>
+          <div class="profileName col s6">
+            <a mz-button
+            mz-icon-mdi
+            class="white-text"
+            [icon]="'menu-down'"
+            [size]="'24px'"
+            [align]="'right'"
+            [flat]="'true'"
+            class="profileButton"
+            id="btn-dropdown-profile"
+            >José Wilder</a>
+
+          </div>
+        </div>
+      </div>
       <div class="row contentContent"><router-outlet></router-outlet></div>
     </div>
 
@@ -26,7 +76,7 @@
 </div>
 <mz-dropdown
 [id]="'dropdown-demo'"
-[align]="'left'"
+[align]="'right'"
 [belowOrigin]="false"
 [constrainWidth]="true"
 [dropdownButtonId]="'btn-dropdown-demo'"
@@ -36,8 +86,26 @@
 [outDuration]="300"
 [stopPropagation]="true"
 >
-<mz-dropdown-item><a href="#!">One</a></mz-dropdown-item>
+<mz-dropdown-item><a routerLink="editar-capa">Capa</a></mz-dropdown-item>
+<mz-dropdown-item><a routerLink="editar-sobre">Sobre</a></mz-dropdown-item>
+<mz-dropdown-divider></mz-dropdown-divider>
+<mz-dropdown-item><a routerLink="editar-eventos">Eventos</a></mz-dropdown-item>
+</mz-dropdown>
+
+<mz-dropdown
+[id]="'dropdown-menu'"
+[align]="'right'"
+[belowOrigin]="true"
+[constrainWidth]="true"
+[dropdownButtonId]="'btn-dropdown-profile'"
+[gutter]="true"
+[hover]="true"
+[inDuration]="300"
+[outDuration]="300"
+[stopPropagation]="true"
+>
+<mz-dropdown-item><a href="#!">Editar</a></mz-dropdown-item>
 <mz-dropdown-item><a href="#!">Two</a></mz-dropdown-item>
 <mz-dropdown-divider></mz-dropdown-divider>
-<mz-dropdown-item><a href="#!">Three</a></mz-dropdown-item>
+<mz-dropdown-item><a href="#!">Sair</a></mz-dropdown-item>
 </mz-dropdown>

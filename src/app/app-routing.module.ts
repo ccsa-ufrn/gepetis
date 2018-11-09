@@ -8,6 +8,13 @@ import { CoverComponent } from './viewpage/components/cover/cover.component';
 import { EventsComponent } from './viewpage/components/events/events.component';
 //----------------------
 
+// DASHBOARD COMPONENTS TO VIEW
+import { EditAboutComponent } from './dashboard/dash-components/edit-about/edit-about.component';
+import { EditCoverComponent } from './dashboard/dash-components/edit-cover/edit-cover.component';
+import { EditEventsComponent } from './dashboard/dash-components/edit-events/edit-events.component';
+
+//----------------------
+
 import { IndexDComponent } from './dashboard/index/index.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -32,6 +39,11 @@ const routes: Routes = [
 { path: 'painel', component: IndexDComponent,
 children: [
   { path: '', component: CoverComponent },
+  { path: 'editar-capa', component: EditCoverComponent },
+  { path: 'editar-sobre', component: EditAboutComponent },
+  { path: 'editar-eventos', component: EditEventsComponent },
+
+
 ]
  },
 

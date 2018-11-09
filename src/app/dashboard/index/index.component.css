@@ -4,6 +4,22 @@
 .col{
   padding: 0;
 }
+.profileAvatar i{
+  padding: 5px;
+  float:right;
+
+}
+.profileName{
+  color:white;
+  display: flex;
+}
+.profileButton{
+  padding:3px;
+  color:white;
+}
+.profileName i{
+  padding-top:20px;
+}
 .sideMenu{
   height: 100%;
   padding-bottom: 100vh;
@@ -18,5 +34,14 @@
 }
 ul li{
   font-size: 1.2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
+}
+
+a{
+  color:#0F3121;
+
+}
+a:hover{
+  color:#258A5A;
+
 }

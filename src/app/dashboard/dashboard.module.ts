@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IndexDComponent } from './index/index.component';
 import { UtilsModule } from '../utils/utils.module';
+import {DashComponentsModule} from './dash-components/dash-components.module';
 
 @NgModule({
   imports: [
@@ -10,6 +11,6 @@ import { UtilsModule } from '../utils/utils.module';
 
   ],
   declarations: [IndexDComponent],
-  exports:[IndexDComponent]
+  exports:[IndexDComponent,DashComponentsModule ]
 })
 export class DashboardModule { }
