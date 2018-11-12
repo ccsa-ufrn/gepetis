@@ -1,0 +1,38 @@
+.aboutHeader{
+  background: linear-gradient(90deg,#a5d6a7 0.5%, white);
+  padding:5px;
+  margin:-22px;
+}
+.sectionHeader{
+  background: linear-gradient(90deg,#a5d6a7 0.5%, white);
+  color:#0F3121;
+}
+.welcome{
+  margin-top:2rem;
+}
+.articlesTitle{
+  background:#369369;
+  padding: 0.5rem;
+}
+.editBtn{
+  padding: 15px;
+  padding-top: 0;
+}
+.removeBtn{
+  padding: 15px;
+  padding-top: 0;
+  margin-left:0.2rem;
+  background: #E03737;
+}
+.tablEnd{
+  float: right;
+}
+.insideMenu{
+  padding:1.2rem;
+}
+.btn{
+  margin:1rem;
+}
+.optionsTh{
+  margin-left:-1rem!important;
+}
