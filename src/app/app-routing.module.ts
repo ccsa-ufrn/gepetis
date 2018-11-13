@@ -6,6 +6,8 @@ import { IndexComponent } from './viewpage/index/index.component';
 import { AboutComponent } from './viewpage/components/about/about.component';
 import { CoverComponent } from './viewpage/components/cover/cover.component';
 import { EventsComponent } from './viewpage/components/events/events.component';
+import { NewsComponent } from './viewpage/components/news/news.component';
+
 //----------------------
 
 
@@ -41,6 +43,7 @@ const routes: Routes = [
     { path: 'sobre', component: AboutComponent},
     { path: 'cadastro', component: RegisterComponent },
     { path: 'events', component: EventsComponent },
+    { path: 'noticias', component: NewsComponent },
     { path: 'user', component: UserDashboardComponent,
       children:[
         { path: '', component: SubmissionsComponent },
