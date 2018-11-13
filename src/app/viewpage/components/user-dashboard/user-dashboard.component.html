@@ -5,38 +5,50 @@
   <div class="col s12 welcome">
     <h5>Bem vindo, José Wilder de Morais Venancio</h5>
     <div class="col s12 flex-center insideMenu">
-      <a mz-button class="btn orange accent-4">Nova Submissão</a>
-      <a mz-button class="btn ">Editar Perfil</a>
-      <a mz-button class="btn">Alterar Senha</a>
-      <a mz-button class="btn">Sair</a>
+      <a mz-button class="btn orange accent-4"
+      routerLink="/user/nova-submissao">Nova Submissão</a>
+      <a mz-button class="btn "
+      routerLink="/user/editar-perfil">Editar Perfil</a>
+      <a mz-button class="btn"
+      (click)="bottomSheetModal.openModal()">Alterar Senha</a>
+      <a mz-button class="btn"
+      routerLink=" ">Sair</a>
 
 
     </div>
   </div>
 </div>
-<div class="row articles">
-  <div class="articlesTitle col s12">
-    <h5 class="white-text">Meus Artigos</h5>
-  </div>
-  <div class="col s12">
-    <table>
-      <thead>
-        <tr>
-            <th>Autor</th>
-            <th>Titulo</th>
-            <th class=" flex-center optionsTh">Opções</th>
+    <router-outlet></router-outlet>
 
-        </tr>
-      </thead>
 
-      <tbody>
-        <tr>
-          <td>José Wilder</td>
-          <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
-          <td class="flex-center"><a mz-button class="editBtn">Editar</a>
-            <a mz-button class="removeBtn">Excluir</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+    <mz-modal #bottomSheetModal [fixedFooter]="false" [bottomSheet]="false" [options]="modalOptions">
+      <mz-modal-header>
+        <h4>Modal Title</h4>
+      </mz-modal-header>
+      <mz-modal-content>
+        <form formGroup="">
+          <div class="row">
+              <div class="col s12">
+                  Digite a senha atual:
+                  <div class="input-field inline">
+                    <input id="email_inline" type="email" class="validate">
+                    <label for="email_inline">Aqui</label>
+                    <span class="helper-text" data-error="wrong" data-success="right"></span>
+                  </div>
+                  </div><div class="col s12">
+                      Digite a senha nova:
+                      <div class="input-field inline">
+                        <input id="email_inline" type="email" class="validate">
+                        <label for="email_inline">Aqui</label>
+                        <span class="helper-text" data-error="wrong" data-success="right"></span>
+                      </div>
+                      </div>
+            </div>
+          </form>
+
+      </mz-modal-content>
+      <mz-modal-footer>
+        <button mz-button [flat]="true" mz-modal-close>Cancelar</button>
+        <button mz-button [flat]="true" mz-modal-close>Alterar</button>
+      </mz-modal-footer>
+    </mz-modal>

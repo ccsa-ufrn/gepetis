@@ -6,7 +6,15 @@ import { IndexComponent } from './viewpage/index/index.component';
 import { AboutComponent } from './viewpage/components/about/about.component';
 import { CoverComponent } from './viewpage/components/cover/cover.component';
 import { EventsComponent } from './viewpage/components/events/events.component';
+//----------------------
+
+
+// DASHBOARD TO USER
 import { UserDashboardComponent } from './viewpage/components/user-dashboard/user-dashboard.component';
+import { NewSubComponent } from './viewpage/components/new-sub/new-sub.component';
+import { EditProfileComponent } from './viewpage/components/edit-profile/edit-profile.component';
+import { SubmissionsComponent } from './viewpage/components/submissions/submissions.component';
+
 
 //----------------------
 
@@ -33,7 +41,14 @@ const routes: Routes = [
     { path: 'sobre', component: AboutComponent},
     { path: 'cadastro', component: RegisterComponent },
     { path: 'events', component: EventsComponent },
-    { path: 'user', component: UserDashboardComponent }
+    { path: 'user', component: UserDashboardComponent,
+      children:[
+        { path: '', component: SubmissionsComponent },
+        { path: 'editar-perfil', component: EditProfileComponent },
+        { path: 'nova-submissao', component: NewSubComponent }
+    ]},
+
+
 
   ]
 },

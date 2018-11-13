@@ -7,6 +7,7 @@ import { MzInputModule } from 'ngx-materialize'//input
 import { MzIconMdiModule } from 'ngx-materialize'//input
 import { MzSelectModule } from 'ngx-materialize' //select
 import { MzRadioButtonModule } from 'ngx-materialize' //radio button
+import { MzModalModule } from 'ngx-materialize' //modal
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditorModule } from '@tinymce/tinymce-angular';// mde editor de texto grande
@@ -22,11 +23,12 @@ import { EditorModule } from '@tinymce/tinymce-angular';// mde editor de texto g
     MzSelectModule,
     MzRadioButtonModule,
     EditorModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MzModalModule
 
   ],
   declarations: [],
   exports:[RouterModule,MzDropdownModule,MzButtonModule,MzInputModule,MzIconMdiModule,
-    MzSelectModule,MzRadioButtonModule,EditorModule, ReactiveFormsModule]
+    MzSelectModule,MzRadioButtonModule,EditorModule, ReactiveFormsModule,MzModalModule]
 })
 export class UtilsModule { }

@@ -26,12 +26,14 @@ import { UtilsModule} from './utils/utils.module'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SubmissionsComponent } from './pageview/components/submissions/submissions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SubmissionsComponent
   ],
   imports: [
     BrowserModule,
