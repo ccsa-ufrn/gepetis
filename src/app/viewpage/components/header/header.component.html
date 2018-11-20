@@ -16,8 +16,8 @@
           <li><a routerLink="/capa">Capa</a></li>
           <li><a routerLink="/noticias">Notícias</a></li>
           <li><a routerLink="/sobre">Sobre</a></li>
-          <li><a routerLink="/cadastro">Cadastro</a></li>
-          <li><a routerLink="/user">Painel de Usuário</a></li>
+          <li><a *ngIf(!loggedIn) routerLink="/cadastro">Cadastro</a></li>
+          <li><a *ngIf="loggedIn" routerLink="/user">Painel de Usuário</a></li>
           <!-- Dropdown Trigger -->
           <li><a mz-button id="btn-dropdown-demo" class="background-none border-white" href="#">Edições Anterirores</a></li>
         </ul>

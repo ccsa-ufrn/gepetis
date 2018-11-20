@@ -37,14 +37,14 @@ import { AuthGuard } from './_guards/auth.guard';
 //, canActivate: [AuthGuard]
 const routes: Routes = [
 {
-  path: '', component: IndexComponent, canActivate: [AuthGuard],
+  path: '', component: IndexComponent,
   children: [
     { path: '', component: CoverComponent },
     { path: 'sobre', component: AboutComponent},
     { path: 'cadastro', component: RegisterComponent },
     { path: 'events', component: EventsComponent },
     { path: 'noticias', component: NewsComponent },
-    { path: 'user', component: UserDashboardComponent,
+    { path: 'user', component: UserDashboardComponent, canActivate: [AuthGuard],
       children:[
         { path: '', component: SubmissionsComponent },
         { path: 'editar-perfil', component: EditProfileComponent },
@@ -57,7 +57,7 @@ const routes: Routes = [
 },
 { path: 'login', component: LoginComponent },
 
-{ path: 'painel', component: IndexDComponent,
+{ path: 'painel', component: IndexDComponent,canActivate: [AuthGuard],
 children: [
   { path: '', component: CoverComponent },
   { path: 'editar-capa', component: EditCoverComponent },

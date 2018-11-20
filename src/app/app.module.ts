@@ -26,14 +26,12 @@ import { UtilsModule} from './utils/utils.module'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { SubmissionsComponent } from './pageview/components/submissions/submissions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    SubmissionsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +46,6 @@ import { SubmissionsComponent } from './pageview/components/submissions/submissi
   ],
   providers: [
     AuthGuard,
-    AuthenticationService,
     UserService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

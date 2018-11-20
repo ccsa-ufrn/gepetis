@@ -11,7 +11,7 @@ import { MzModalModule } from 'ngx-materialize' //modal
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditorModule } from '@tinymce/tinymce-angular';// mde editor de texto grande
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
@@ -24,11 +24,12 @@ import { EditorModule } from '@tinymce/tinymce-angular';// mde editor de texto g
     MzRadioButtonModule,
     EditorModule,
     ReactiveFormsModule,
-    MzModalModule
+    MzModalModule,
+    FormsModule
 
   ],
   declarations: [],
   exports:[RouterModule,MzDropdownModule,MzButtonModule,MzInputModule,MzIconMdiModule,
-    MzSelectModule,MzRadioButtonModule,EditorModule, ReactiveFormsModule,MzModalModule]
+    MzSelectModule,MzRadioButtonModule,EditorModule, ReactiveFormsModule,MzModalModule,FormsModule]
 })
 export class UtilsModule { }
