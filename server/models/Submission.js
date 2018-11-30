@@ -1,11 +1,11 @@
 
 const mongoose = require('mongoose');
 // const Author = require('../models/Submission');
-const Event = require('../models/Event');
+//const Event = require('../models/Event');
 
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
+const SubmissionSchema = new Schema({
     title: {
         type: String,
         required: true
@@ -20,13 +20,11 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    event: [
-      { type: Schema.Types.ObjectId, ref: 'Event' }
-    ],
+    event: {
+      type: String,
+    },
 
 
 });
 
-// const User =
-
-module.exports = mongoose.model('users', UserSchema);;
+module.exports = mongoose.model('submission', SubmissionSchema);;
