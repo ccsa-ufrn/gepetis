@@ -12,7 +12,7 @@
       <a mz-button class="btn"
       (click)="bottomSheetModal.openModal()">Alterar Senha</a>
       <a mz-button class="btn"
-      routerLink=" ">Sair</a>
+      (click)="logout()">Sair</a>
 
 
     </div>
@@ -21,12 +21,12 @@
     <router-outlet></router-outlet>
 
 
-    <mz-modal #bottomSheetModal [fixedFooter]="false" [bottomSheet]="false" [options]="modalOptions">
+    <mz-modal #bottomSheetModal [fixedFooter]="true" [bottomSheet]="false" [options]="modalOptions">
       <mz-modal-header>
         <h4>Alterar Senha</h4>
       </mz-modal-header>
       <mz-modal-content>
-        <!-- <form formGroup="">
+        <form [formGroup]="passwordChange">
           <div class="row">
               <div class="col s12">
                   Digite a senha atual:
@@ -44,11 +44,11 @@
                       </div>
                       </div>
             </div>
-          </form> -->
+          </form>
 
       </mz-modal-content>
       <mz-modal-footer>
         <button mz-button [flat]="true" mz-modal-close>Cancelar</button>
-        <button mz-button [flat]="true" mz-modal-close>Alterar</button>
+        <button mz-button [flat]="true" mz-modal-close (click)="change()">Alterar</button>
       </mz-modal-footer>
     </mz-modal>

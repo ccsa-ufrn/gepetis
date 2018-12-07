@@ -5,33 +5,51 @@
 </div>
 
 <div class="row">
-  <form  formGroup=""class="col s12">
+  <form  [formGroup]="profileEdited" >
+    <div class="row">
+      <div class="input-field col s4">
+        <input placeholder="José " id="first_name" type="text" class="validate">
+        <label for="first_name">Nome</label>
+      </div>
+      <div class="input-field col s4">
+        <input placeholder="Wilder" id="mid_name" type="text" class="validate">
+        <label for="mid_name">Nome do Meio</label>
+      </div>
+      <div class="input-field col s4">
+        <input placeholder="de Morais Venancio" id="last_name" type="text" class="validate">
+        <label for="last_name">Sobrenome</label>
+      </div>
+    </div>
+
     <div class="row">
       <div class="input-field col s6">
-        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-        <label for="first_name">First Name</label>
+        <input placeholder="UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE"
+        id="institution" type="text" class="validate">
+        <label for="institution">Instituição</label>
       </div>
       <div class="input-field col s6">
-        <input id="last_name" type="text" class="validate">
-        <label for="last_name">Last Name</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-        <label for="disabled">Disabled</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="password" type="password" class="validate">
-        <label for="password">Password</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
+        <input placeholder="joswilder46@gmail.com " id="email" type="email" class="validate">
         <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2">
+        <mz-select-container>
+          <select mz-select
+            id="options-select"
+            [label]="'Sexo'"
+            [placeholder]="'Masculino'"
+          >
+              <option class="left circle">Masculino</option>
+              <option class="left circle">Feminino</option>
+
+          </select>
+        </mz-select-container>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 flex-center">
+        <a mz-button>Editar</a>
       </div>
     </div>
   </form>

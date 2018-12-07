@@ -26,6 +26,7 @@ export class EventService {
     //make a new event post
   }
   getAtualEvent(){
+    // add the atual event to the localstorage to everyone can change and use the porpeties
   }
   getAbout(){
 
