@@ -169,16 +169,19 @@
           <mz-radio-button-container>
               <input mz-radio-button
                 [label]="'Aceito os termos de serviço'"
-                [withGap]="true"
+                [withGap]="false"
                 id="radio-button-id"
                 name="radio-group"
-                type="radio">
+                type="radio"
+                value="true"
+                formControlName="therm"
+                (click)="getTherm()">
             </mz-radio-button-container>
        </div>
        <div class="row">
           <div class="left">
               <button mz-button
-              disabled="true">
+              [disabled]="!profileForm.value.therm === true">
                 Cadastrar
               </button>
             </div>
