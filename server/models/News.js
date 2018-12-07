@@ -8,26 +8,25 @@ const Event = new Schema({
         type: String,
         required: true
     },
+    subtitle:{
+      type: String,
+      required:true
+    },
+    content:{
+      type: String,
+      required: true
+    },
+    date: {
+        type: String,
+        required: true
+    },
     create_date: {
         type: Date,
         default: Date.now
     },
-    about:{
-        type: String,
-        required: true
-    },
-    cover: {
-      data: Buffer, contentType: String,
-      required: false
-     },
-    submissions:[
-      { type: Schema.Types.ObjectId,
-       ref: 'submission',
-       required:false,},
 
-     ],
 });
 
-// const User =
+
 
 module.exports = mongoose.model('Event', Event);;

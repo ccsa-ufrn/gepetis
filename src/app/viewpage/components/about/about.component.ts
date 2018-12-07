@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { TextService} from '../../../_services/text.service'
+import { EventService } from '../../../_services/event.service'
 
 declare var tinymce:any;
 @Component({
@@ -17,7 +18,8 @@ export class AboutComponent implements  AfterViewInit {
 
 
   constructor(
-    private TextService :TextService
+    private TextService :TextService,
+    private EventService :EventService
   ) {
     this.teste = new FormGroup({
       text: new FormControl(''),
@@ -29,9 +31,18 @@ export class AboutComponent implements  AfterViewInit {
 
 
   }
+  getAbout(){
+    this.EventService.get()
+    .subscribe(
+      res =>{
+        this.textTo = res[0].about
 
+      }
+    )
+  }
   ngAfterViewInit(){
-    this.textTo = this.TextService.getText();
+    // this.textTo = this.TextService.getText();
+    this.getAbout();
     console.log(this.textTo);
 
   }

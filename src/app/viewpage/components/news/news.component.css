@@ -1,3 +1,9 @@
 .newsBox{
   border: 1px solid #0F3121;
+  padding: 100px;
+}
+.newsBox2{
+  border: 1px solid #0F3121;
+  padding: 100px;
+  padding-bottom: 340px;
 }

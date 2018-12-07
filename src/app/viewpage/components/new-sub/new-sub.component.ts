@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-sub.component.css']
 })
 export class NewSubComponent implements OnInit {
-
+ formSub: any;
   constructor() { }
-
   ngOnInit() {
   }
 

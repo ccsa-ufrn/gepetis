@@ -7,16 +7,16 @@ var mongoose = require('mongoose');
 const Event_model = mongoose.model('Event');
 
 router.post('/event', (req, res) => {
-  const event_ = new Submission(req.body);
+  const event_ = new Event(req.body);
     event_.save()
     .then(res => {
       res.status(201).send({
-        message: "Submissão Enviada"
+        message: "Evento Cadastrado"
       });
     })
     .catch(e => {
       res.status(400).send({
-        message: "Submissão inalida"
+        message: "Evento invalido"
       });
     });
     res.status(200).send(req.body);
