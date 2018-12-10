@@ -2,6 +2,11 @@ const express = require('express');
 const router = express.Router();
 const Submission = require('../models/Submission');
 
+var multer  = require('multer'); // to upload files
+const storage = require('multer-gridfs-storage')({
+  url: 'mongodb://localhost:27017/gepetis'
+});
+var upload = multer({ storage: storage }).single('article'); //to upload files
 var mongoose = require('mongoose');
 
 const Submission_model = mongoose.model('submission');
@@ -34,6 +39,19 @@ router.post('/submission', (req, res) => {
       });
     });
   });
+
+  router.post('/file',(req,res) =>{
+    upload(req, res, function (err) {
+      if (err instanceof multer.MulterError) {
+       console.log(err)
+      } else if (err) {
+        console.log("unknown error:")
+        console.log(err);
+      }
+
+      console.log("everything went okay")
+    })
+  })
 
   module.exports = router;
 

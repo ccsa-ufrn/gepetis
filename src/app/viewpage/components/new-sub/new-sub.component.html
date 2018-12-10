@@ -5,7 +5,7 @@
 </div>
 
 <div class="row">
-  <form  class="col s10 offset-s1">
+  <form  [formGroup]="newSub"class="col s10 offset-s1" enctype="multipart/form-data" (ngSubmit)="fileUpload(this.article)">
     <div class="row">
       <div class="input-field col s8">
         <input id="first_name" type="text" class="validate">
@@ -23,19 +23,19 @@
       </div>
       <div class="file-field input-field col s4">
         <div class="btn">
-          <span>File</span>
-          <input type="file">
+          <span>Upload</span>
+          <input type="file" name="article" (change)="fileUpload($event)">
         </div>
         <div class="file-path-wrapper">
           <input class="file-path validate" type="text">
         </div>
       </div>
     </div>
-
+    <div class="row flex-center">
+      <div>
+        <button mz-button type="submit"> Enviar</button>
+    </div>
+    </div>
   </form>
 </div>
-<div class="row flex-center">
-  <div>
-    <button mz-button> Enviar</button>
-</div>
-</div>
+
