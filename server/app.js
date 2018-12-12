@@ -6,17 +6,22 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const config = require('./db');
 
+const GridFSStorage = require('multer-gridfs-storage');
+
 const cors = require('cors');
 
 const users = require('./routes/user'); // user router controller
 const submissions = require('./routes/submission');// submission route controller
 const event = require('./routes/event');// event route controller
 
+// .then(
+//   () => {console.log('Database is connected') },
+//   err => { console.log('Can not connect to the database'+ err)},
+//   // client => {const database = client.db('database')
+//   // storage = new GridFSStorage({ db: database });}
+// );
+const connection = mongoose.connect(config.DB, { useNewUrlParser: true });
 
-mongoose.connect(config.DB, { useNewUrlParser: true }).then(
-    () => {console.log('Database is connected') },
-    err => { console.log('Can not connect to the database'+ err)}
-);
 
 
 const app = express();

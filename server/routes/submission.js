@@ -1,15 +1,26 @@
 const express = require('express');
-const router = express.Router();
+const mongoose = require('mongoose');
 const Submission = require('../models/Submission');
-
-var multer  = require('multer'); // to upload files
-const storage = require('multer-gridfs-storage')({
-  url: 'mongodb://localhost:27017/gepetis'
-});
-var upload = multer({ storage: storage }).single('article'); //to upload files
-var mongoose = require('mongoose');
-
+const router = express.Router();
 const Submission_model = mongoose.model('submission');
+const multer = require('multer')
+const path = require('path')
+// const config = require('/home/ccsa/gepetis-att/server/db.js');
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './public/images/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+  }
+})
+const upload = multer({ storage: storage }).single('article'); //to upload files
+//const GridFsStorage = require('multer-gridfs-storage');
+
+
+//const upload = multer({ storage });
+
 
 router.post('/submission', (req, res) => {
   const submission_ = new Submission(req.body);
@@ -41,16 +52,17 @@ router.post('/submission', (req, res) => {
   });
 
   router.post('/file',(req,res) =>{
-    upload(req, res, function (err) {
-      if (err instanceof multer.MulterError) {
-       console.log(err)
-      } else if (err) {
-        console.log("unknown error:")
-        console.log(err);
-      }
+      upload(req, res, function (err) {
+        if (err instanceof multer.MulterError) {
+        console.log(err)
+        } else if (err) {
+          console.log("unknown error:")
+          console.log(err);
+        }
 
-      console.log("everything went okay")
-    })
+        console.log("everything went okay")
+        console.log(req.file);
+      })
   })
 
   module.exports = router;
