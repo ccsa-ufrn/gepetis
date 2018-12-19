@@ -12,4 +12,7 @@ export class IndexDComponent implements OnInit {
   ngOnInit() {
   }
 
+  logout(){
+    //remove item from console.
+  }
 }

@@ -24,6 +24,8 @@ import { SubmissionsComponent } from './viewpage/components/submissions/submissi
 import { EditAboutComponent } from './dashboard/dash-components/edit-about/edit-about.component';
 import { EditCoverComponent } from './dashboard/dash-components/edit-cover/edit-cover.component';
 import { EditEventsComponent } from './dashboard/dash-components/edit-events/edit-events.component';
+import { EditSubmissionsComponent } from './dashboard/dash-components/edit-submissions/edit-submissions.component';
+import { EditUsersComponent } from './dashboard/dash-components/edit-users/edit-users.component';
 
 //----------------------
 
@@ -60,9 +62,14 @@ const routes: Routes = [
 { path: 'painel', component: IndexDComponent,canActivate: [AuthGuard],
 children: [
   { path: '', component: CoverComponent },
+  { path: 'editar-submissoes', component: EditSubmissionsComponent},
   { path: 'editar-capa', component: EditCoverComponent },
   { path: 'editar-sobre', component: EditAboutComponent },
   { path: 'editar-eventos', component: EditEventsComponent },
+  { path: 'editar-users', component: EditUsersComponent},
+  { path: 'outros', component: EditSubmissionsComponent},
+
+
 
 
 ]

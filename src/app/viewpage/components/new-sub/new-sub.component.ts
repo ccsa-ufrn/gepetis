@@ -29,7 +29,7 @@ export class NewSubComponent implements OnInit {
      const formData : any = new FormData();
      this.fileTopUpload = event.target.files[0];
      formData.append('article', this.fileTopUpload);
-     this.http.post('http://localhost:5000/api/others/file', formData)
+     this.http.post('http://localhost:5000/api/archive/file', formData)
       .subscribe(files => console.log('file was successfuly uploaded'))
   }
 

@@ -6,13 +6,14 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const config = require('./db');
 
-const GridFSStorage = require('multer-gridfs-storage');
 
 const cors = require('cors');
 
 const users = require('./routes/user'); // user router controller
 const submissions = require('./routes/submission');// submission route controller
 const event = require('./routes/event');// event route controller
+const archive = require('./routes/archive');// archive route controller
+
 
 // .then(
 //   () => {console.log('Database is connected') },
@@ -39,9 +40,9 @@ require('./passport')(passport);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/api/users', users);
+app.use('/api/users',  users);
 app.use('/api/others', submissions);
-app.use('/api/others', event);
+app.use('/api/archive', archive);
 
 app.get('/', function(req, res) {
     res.send('hello');

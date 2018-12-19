@@ -24,7 +24,7 @@ const upload = multer({ storage: storage }).single('article'); //to upload files
 //const upload = multer({ storage });
 
 
-router.post('/submission', (req, res) => {
+router.post('/submission', function(req, res) {
   const submission_ = new Submission(req.body);
     submission_.save()
     .then(res => {
@@ -53,9 +53,8 @@ router.post('/submission', (req, res) => {
     });
   });
 
-  router.post('/file',(req,res) =>{
+  router.post('/file', function(req, res) {
     const path_file =  './public/images/';
-
     upload(req, res, function (err) {
       if (err instanceof multer.MulterError) {
       console.log(err)
@@ -68,11 +67,11 @@ router.post('/submission', (req, res) => {
       console.log(req.file);
     })
       newFile = new File;
-      newFile.filename = req.body.filename;
-      newFile.path_file = req.body.path;
-      newFile.log_entry = Date.now;
-      newFile.file_type = req.body.mimetype;
-      newFile.file_size = req.body.size;
+      //newFile.filename = req.body.filename;
+      //newFile.path_file = req.body.path;
+      newFile.log_entry = Date.now();
+      //newFile.file_type = req.body.mimetype;
+      //newFile.file_size = req.body.size;
       newFile.save()
       .then(res => {
         res.status(201).send({
@@ -81,7 +80,7 @@ router.post('/submission', (req, res) => {
       })
       .catch(e => {
         res.status(400).send({
-          message: "Submissão invvalida"
+          message: "Submissão invvalida   O ERRO É::  "+e
         });
       });
       console.log(newFile);

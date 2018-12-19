@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 const FileSchema = new Schema({
   filename: {
     type: String,
-    required: true
   },
   log_entry: {
     type: Date,
@@ -21,6 +20,9 @@ const FileSchema = new Schema({
   },
   file_size:{
     type: Number,
+  },
+  file_owner:{
+    type: Schema.ObjectId,
   }
 });
 
