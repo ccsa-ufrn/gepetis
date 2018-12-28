@@ -1,0 +1,21 @@
+.filter{
+
+}
+.filters{
+  margin: 0;
+}
+.nameBtn{
+  display: block;
+  padding-top:0.5rem;
+}
+.nameBtn a{
+padding-right: 1.3rem !important;
+}
+
+.box{
+  box-shadow: 1px 1px 10px 0px  #DBD9D9;
+
+}
+table td{
+  border-top: 1px solid #CBCBCB;
+}

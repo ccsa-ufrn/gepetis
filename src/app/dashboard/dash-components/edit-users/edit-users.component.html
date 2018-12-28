@@ -5,38 +5,60 @@
 <div class="row filter grey lighten-4 title">
   <div class="col s12">
       <h6>Filtro</h6>
-      <div class="row buttons">
-        <a mz-button>Procurar por nome</a></div>
+      <div class="row filters">
+        <div class="col s3">
+            <mz-input-container>
+                <i mz-icon-mdi mz-input-prefix
+                  [icon]="'account'">
+                </i>
+                <input mz-input
+                  [autocomplete]="'teste'"
+                  [label]="'Buscar por Nome'"
+                  [validate]="true"
+                  [dataError]="'Nome Inválido'"
+                  [dataSuccess]="'Email is valid'"
+                  id="email-input"
+                  placeholder="Digite aqui"
+                  length="30">
+              </mz-input-container>
+        </div>
+        <div class="col s1 nameBtn">
+          <a mz-button>Buscar</a>
+        </div>
+      </div>
   </div>
 </div>
-<div class="row">
-    <div class="col s10 offset-s1 grey lighten-4">
-      <div class="row">
+<div class="row ">
+    <div class="col s10 offset-s1 grey lighten-4 box">
+      <div class="row ">
         <table>
-            <table>
+            <table class=" highlight">
                 <thead>
                   <tr>
-                      <th>Name</th>
-                      <th>Author</th>
-                      <th>Options</th>
+                      <th>Nome Usuario</th>
+                      <th class="center">Açoes</th>
                   </tr>
                 </thead>
 
                 <tbody>
                   <tr>
-                    <td>Alvin</td>
-                    <td>Eclair</td>
-                    <td>$0.87</td>
+                    <td>Alvin Eos Esquilos</td>
+
+                    <td class="center">
+                    <a mz-button id="btnActions" >Açoes</a>
+                    </td>
                   </tr>
                   <tr>
-                    <td>Alan</td>
-                    <td>Jellybean</td>
-                    <td>$3.76</td>
+                    <td>Alan Turing Pai da Aviação</td>
+                    <td class="center">
+                    <a mz-button id="btnActions" >Açoes</a>
+                    </td>
                   </tr>
                   <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
+                    <td>Jonathan Did Doe</td>
+                    <td class="center">
+                    <a mz-button id="btnActions" >Açoes</a>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -44,3 +66,32 @@
       </div>
     </div>
   </div>
+
+
+  <div class="row ">
+      <div class="col s10 offset-s1 grey lighten-4 box">
+        <div class="row ">
+          <div class="col s2">
+            <h5>Nome:</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <mz-dropdown
+  [id]="'dropdown-demo'"
+  [align]="'left'"
+  [belowOrigin]="false"
+  [constrainWidth]="true"
+  [dropdownButtonId]="'btnActions'"
+  [gutter]="true"
+  [hover]="false"
+  [inDuration]="300"
+  [outDuration]="300"
+  [stopPropagation]="true"
+>
+  <mz-dropdown-item><a href="#!">Ver Perfil</a></mz-dropdown-item>
+  <mz-dropdown-item><a href="#!">Editar </a></mz-dropdown-item>
+  <mz-dropdown-divider></mz-dropdown-divider>
+  <mz-dropdown-item><a href="#!">Excluir </a></mz-dropdown-item>
+</mz-dropdown>
