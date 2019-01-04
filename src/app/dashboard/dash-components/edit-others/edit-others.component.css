@@ -1,0 +1,9 @@
+h6{
+  font-size: 1.2rem;
+}
+.mid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:25px;
+}

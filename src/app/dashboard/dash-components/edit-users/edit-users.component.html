@@ -65,18 +65,11 @@
         </table>
       </div>
     </div>
+    <app-user-action *ngIf="Actioned === true"></app-user-action>
   </div>
 
 
-  <div class="row ">
-      <div class="col s10 offset-s1 grey lighten-4 box">
-        <div class="row ">
-          <div class="col s2">
-            <h5>Nome:</h5>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
   <mz-dropdown
   [id]="'dropdown-demo'"
