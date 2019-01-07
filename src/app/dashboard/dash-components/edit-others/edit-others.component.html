@@ -6,7 +6,7 @@
 
 
   <div class="col s10 offset-s1 grey lighten-3 box ">
-    <h6>Banner:</h6>
+    <h6>o Logotipo:</h6>
     <p class="">O Banner precisa ter as dimensões de Altura: 600 Pixels e Largura: 1200 Pixels</p>
       <form [formGroup]="" class="center">
 
@@ -28,44 +28,43 @@
   </div>
 </div>
 <div class="row">
-
+<!-- https://github.com/zefoy/ngx-color-picker -->
   <div class="col s10 offset-s1 grey lighten-3 box ">
     <h5>Editar Cores</h5>
     <div class="row option">
       <div class="col s5">
-        <mz-select-container
-        [inline]="true"
-        >
-          <p>Cor de fundo Roda-Teto:</p><select mz-select
-            id="options-select"
-            [placeholder]="'Placeholder'"
-          ><option >2019</option>
-          </select>
-        </mz-select-container></div>
-    </div>
-    <div class="row option">
-        <div class="col s5">
-          <mz-select-container
-          [inline]="true"
-          >
-            <p>Cor de fundo Logotipo:</p><select mz-select
-              id="options-select"
-              [placeholder]="'Placeholder'"
-            ><option >2019</option>
-            </select>
-          </mz-select-container></div>
-      </div>
-      <div class="row option">
-          <div class="col s5">
-            <mz-select-container
-            [inline]="true"
-            >
-              <p>Cor de fundo Página de Usuário:</p><select mz-select
-                id="options-select"
-                [placeholder]="'Placeholder'"
-              ><option >2019</option>
-              </select>
-            </mz-select-container></div>
+        <div class="col s4"><p class="pInput">Core de Fundo</p></div>
+        <div class="col s6">
+            <mz-input-container>
+                <i mz-icon-mdi mz-input-prefix
+                  [icon]="'format-color-fill'">
+                </i>
+                <input mz-input
+                  [validate]="true"
+                  [dataError]="'Email is invalid'"
+                  [dataSuccess]="'Email is valid'"
+                  id="email-input"
+                  placeholder="Selecionar Cor"
+                   type="email">
+              </mz-input-container>
         </div>
+    </div>
+    <div class="col s5">
+        <div class="col s4"><p class="pInput">Core de Fundo Logotipo</p></div>
+        <div class="col s6">
+            <mz-input-container>
+                <i mz-icon-mdi mz-input-prefix
+                  [icon]="'format-color-fill'">
+                </i>
+                <input mz-input
+                  [validate]="true"
+                  [dataError]="'Email is invalid'"
+                  [dataSuccess]="'Email is valid'"
+                  id="email-input"
+                  placeholder="Selecionar Cor"
+                   type="email">
+              </mz-input-container>
+        </div>
+    </div>
   </div>
 </div>

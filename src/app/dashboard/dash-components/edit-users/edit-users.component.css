@@ -19,3 +19,9 @@ padding-right: 1.3rem !important;
 table td{
   border-top: 1px solid #CBCBCB;
 }
+.userAction img:hover{
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+.userAction{
+  padding: 10px;
+}
