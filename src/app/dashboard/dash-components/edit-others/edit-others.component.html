@@ -33,19 +33,13 @@
     <h5>Editar Cores</h5>
     <div class="row option">
       <div class="col s5">
-        <div class="col s4"><p class="pInput">Core de Fundo</p></div>
+        <div class="col s4"><p class="pInput">Cor de Fundo RodaTeto</p></div>
         <div class="col s6">
             <mz-input-container>
                 <i mz-icon-mdi mz-input-prefix
                   [icon]="'format-color-fill'">
                 </i>
-                <input mz-input
-                  [validate]="true"
-                  [dataError]="'Email is invalid'"
-                  [dataSuccess]="'Email is valid'"
-                  id="email-input"
-                  placeholder="Selecionar Cor"
-                   type="email">
+                <input [(colorPicker)]="color" [style.background]="color"/>
               </mz-input-container>
         </div>
     </div>
@@ -56,15 +50,33 @@
                 <i mz-icon-mdi mz-input-prefix
                   [icon]="'format-color-fill'">
                 </i>
-                <input mz-input
-                  [validate]="true"
-                  [dataError]="'Email is invalid'"
-                  [dataSuccess]="'Email is valid'"
-                  id="email-input"
-                  placeholder="Selecionar Cor"
-                   type="email">
+                <input id="2" [(colorPicker)]="color2" [style.background]="color2"/>
               </mz-input-container>
         </div>
     </div>
   </div>
+  <div class="row option">
+    <div class="col s5">
+      <div class="col s4"><p class="pInput">Cor dos Botões</p></div>
+      <div class="col s6">
+          <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix
+                [icon]="'format-color-fill'">
+              </i>
+              <input [(colorPicker)]="color" [style.background]="color"/>
+            </mz-input-container>
+      </div>
+  </div>
+  <div class="col s5">
+      <div class="col s4"><p class="pInput">Core de Fundo Logotipo</p></div>
+      <div class="col s6">
+          <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix
+                [icon]="'format-color-fill'">
+              </i>
+              <input id="2" [(colorPicker)]="color2" [style.background]="color2"/>
+            </mz-input-container>
+      </div>
+  </div>
+</div>
 </div>

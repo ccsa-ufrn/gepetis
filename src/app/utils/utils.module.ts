@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EditorModule } from '@tinymce/tinymce-angular';// mde editor de texto grande
 import { FormsModule } from '@angular/forms';           // to use in forms
 
+import { ColorPickerModule } from 'node_modules/ngx-color-picker';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { FormsModule } from '@angular/forms';           // to use in forms
     ReactiveFormsModule,
     MzModalModule,
     FormsModule,
+    ColorPickerModule
 
 
 
@@ -34,6 +37,6 @@ import { FormsModule } from '@angular/forms';           // to use in forms
   declarations: [],
   exports:[RouterModule,MzDropdownModule,MzButtonModule,MzInputModule,MzIconMdiModule,
     MzSelectModule,MzRadioButtonModule,EditorModule, ReactiveFormsModule,MzModalModule,FormsModule,
-    ]
+    ColorPickerModule]
 })
 export class UtilsModule { }
