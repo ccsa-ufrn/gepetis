@@ -27,6 +27,7 @@ import { EditEventsComponent } from './dashboard/dash-components/edit-events/edi
 import { EditSubmissionsComponent } from './dashboard/dash-components/edit-submissions/edit-submissions.component';
 import { EditUsersComponent } from './dashboard/dash-components/edit-users/edit-users.component';
 import { EditOthersComponent } from './dashboard/dash-components/edit-others/edit-others.component';
+import { EditNewsComponent } from './dashboard/dash-components/edit-news/edit-news.component';
 
 //----------------------
 
@@ -69,6 +70,8 @@ children: [
   { path: 'editar-eventos', component: EditEventsComponent },
   { path: 'editar-users', component: EditUsersComponent},
   { path: 'outros', component: EditOthersComponent},
+  { path: 'editar-noticias', component: EditNewsComponent},
+
 
 
 

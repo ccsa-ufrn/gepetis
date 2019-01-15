@@ -48,11 +48,12 @@
       <div class="row contentHeader">
         <div class="col s4 offset-s8">
           <div class="profileAvatar col s6 ">
-              <i mz-icon-mdi
+              <!-- <i mz-icon-mdi
               class="white-text"
               [icon]="'account-circle'"
               [size]="'36px'">
-            </i>
+            </i> -->
+            <img src="./assets/user.png" alt="">
           </div>
           <div class="profileName col s6">
             <a mz-button
@@ -87,10 +88,11 @@
 [outDuration]="300"
 [stopPropagation]="true"
 >
-<mz-dropdown-item><a routerLink="editar-capa">Capa</a></mz-dropdown-item>
 <mz-dropdown-item><a routerLink="editar-sobre">Sobre</a></mz-dropdown-item>
 <mz-dropdown-divider></mz-dropdown-divider>
 <mz-dropdown-item><a routerLink="editar-eventos">Eventos</a></mz-dropdown-item>
+<mz-dropdown-item><a routerLink="editar-noticias">Notícias</a></mz-dropdown-item>
+
 </mz-dropdown>
 
 <mz-dropdown

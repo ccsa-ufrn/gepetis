@@ -16,7 +16,9 @@ export class SubmissionService {
   get(){
     return this.http.get<Submission[]>(this.url);
   }
-  set(){}
+  set(data:any){
+    this.http.post(this.url,data);
+  }
   update(){}
   delete(){}
 }

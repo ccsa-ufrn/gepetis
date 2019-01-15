@@ -4,8 +4,10 @@
 .col{
   padding: 0;
 }
-.profileAvatar i{
-  padding: 5px;
+.profileAvatar img{
+  padding: 5px!important;
+  padding-top: 10px!important;
+
   float:right;
 
 }
