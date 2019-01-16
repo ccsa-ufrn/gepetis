@@ -48,7 +48,7 @@ const routes: Routes = [
     { path: 'cadastro', component: RegisterComponent },
     { path: 'events', component: EventsComponent },
     { path: 'noticias', component: NewsComponent },
-    { path: 'user', component: UserDashboardComponent, canActivate: [AuthGuard],
+    { path: 'user', component: UserDashboardComponent, canActivate: [], // need AuthGuard
       children:[
         { path: '', component: SubmissionsComponent },
         { path: 'editar-perfil', component: EditProfileComponent },
@@ -61,7 +61,7 @@ const routes: Routes = [
 },
 { path: 'login', component: LoginComponent },
 
-{ path: 'painel', component: IndexDComponent,canActivate: [AuthGuard],
+{ path: 'painel', component: IndexDComponent,canActivate: [], // need AuthGuard
 children: [
   { path: '', component: CoverComponent },
   { path: 'editar-submissoes', component: EditSubmissionsComponent},
