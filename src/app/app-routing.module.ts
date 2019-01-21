@@ -71,7 +71,12 @@ children: [
   { path: 'editar-submissoes', component: EditSubmissionsComponent},
   { path: 'editar-capa', component: EditCoverComponent },
   { path: 'editar-sobre', component: EditAboutComponent },
-  { path: 'editar-eventos', component: EditEventsComponent },
+  { path: 'editar-eventos', component: EditEventsComponent,
+  children:[
+    { path: 'novo-evento', component: NewNoticeComponent },
+    { path: 'editar-evento', component: NewNoticeComponent },
+        
+  ] },
   { path: 'editar-users', component: EditUsersComponent,
     children:[
   { path: 'editar:userId', component: UserSettingsComponent },
