@@ -29,6 +29,10 @@ import { EditUsersComponent } from './dashboard/dash-components/edit-users/edit-
 import { EditOthersComponent } from './dashboard/dash-components/edit-others/edit-others.component';
 import { EditNewsComponent } from './dashboard/dash-components/edit-news/edit-news.component';
 
+import { UserSettingsComponent } from './dashboard/unique-components/user-settings/user-settings.component';
+import { NewNoticeComponent } from './dashboard/unique-components/new-notice/new-notice.component';
+
+
 //----------------------
 
 import { IndexDComponent } from './dashboard/index/index.component';
@@ -68,9 +72,18 @@ children: [
   { path: 'editar-capa', component: EditCoverComponent },
   { path: 'editar-sobre', component: EditAboutComponent },
   { path: 'editar-eventos', component: EditEventsComponent },
-  { path: 'editar-users', component: EditUsersComponent},
+  { path: 'editar-users', component: EditUsersComponent,
+    children:[
+  { path: 'editar:userId', component: UserSettingsComponent },
+      
+    ]},
   { path: 'outros', component: EditOthersComponent},
-  { path: 'editar-noticias', component: EditNewsComponent},
+  { path: 'editar-noticias', component: EditNewsComponent,
+  children:[
+    { path: 'nova-noticia', component: NewNoticeComponent },
+    { path: 'editar-noticia', component: NewNoticeComponent },
+        
+  ]},
 
 
 

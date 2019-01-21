@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-users.component.css']
 })
 export class EditUsersComponent implements OnInit {
-
+  Actioned = false;
   constructor() { }
-
+  editUser(){
+    this.Actioned = true;
+  }
   ngOnInit() {
   }
 

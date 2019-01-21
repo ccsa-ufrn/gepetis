@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-events.component.css']
 })
 export class EditEventsComponent implements OnInit {
-
+  Actioned : boolean;
   constructor() { }
-
+  actionPage(){
+    this.Actioned = true;
+  }
   ngOnInit() {
   }
 

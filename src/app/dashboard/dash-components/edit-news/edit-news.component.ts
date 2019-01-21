@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-news.component.css']
 })
 export class EditNewsComponent implements OnInit {
-
+  Actioned = false;
   constructor() { }
-
+  actionPage(){
+    this.Actioned = true;
+  }
   ngOnInit() {
   }
 

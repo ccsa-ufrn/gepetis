@@ -9,11 +9,12 @@ import { UtilsModule } from '../../utils/utils.module';
 import { UserActionComponent } from './user-action/user-action.component';
 import { EditOthersComponent } from './edit-others/edit-others.component';
 import { EditNewsComponent } from './edit-news/edit-news.component';
-
+import { UniqueComponentsModule } from '../unique-components/unique-components.module'
 @NgModule({
   imports: [
     CommonModule,
-    UtilsModule
+    UtilsModule,
+    UniqueComponentsModule
   ],
   declarations: [EditAboutComponent, EditCoverComponent, EditEventsComponent, EditSubmissionsComponent, EditUsersComponent, UserActionComponent, EditOthersComponent, EditNewsComponent],
   exports:[EditAboutComponent, EditCoverComponent, EditEventsComponent, EditSubmissionsComponent, EditUsersComponent, UserActionComponent, EditOthersComponent, EditNewsComponent]
