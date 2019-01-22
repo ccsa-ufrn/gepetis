@@ -1,0 +1,22 @@
+textarea{
+    padding-bottom:200px;
+    border: 1px solid #e6e6e6;
+}
+.insideMenu{
+    background: #81C784 !important;
+    color: white;
+}
+label {
+    color:white;
+}
+ ::ng-deep label
+{
+  color: white;
+}
+::ng-deep input[type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
+    border: 2px solid white;
+}
+
+.row{
+    margin: 0 !important;
+}

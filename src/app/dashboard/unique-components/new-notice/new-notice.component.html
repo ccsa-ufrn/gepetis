@@ -2,5 +2,43 @@
   <h5>Nova Noticia</h5>
 </div>
 <div class="row">
- 
+  <div class="col s6">
+    <mz-input-container>
+      <i mz-icon-mdi mz-input-prefix
+        [icon]="'email'">
+      </i>
+      <input mz-input
+        [label]="'Titulo'"
+        [validate]="true"
+        [dataError]="'Titulo inválido'"
+        [dataSuccess]="'Email is valid'"
+        id="title-news"
+        placeholder=""
+        length='150'
+        type="text">
+    </mz-input-container>
+  </div>
+  <div class="col s6 insideMenu">
+    <div class="row">
+      <div class="col s4"> 
+        <mz-radio-button-container>
+          <input class="importantButtonClass" mz-radio-button
+            [label]="'Destaque'"
+            id="importantButton"
+            name="radio-group"
+            type="radio">
+        </mz-radio-button-container>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <textarea id="textNotice" class="materialize-textarea"></textarea>
+    <label for="textNotice" class="green-text">Corpo da Notícia</label>
+  </div>
+</div>
+
+<div class="row center">
+  <a mz-button>Criar</a>
 </div>

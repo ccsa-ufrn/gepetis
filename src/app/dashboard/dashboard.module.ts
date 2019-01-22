@@ -9,7 +9,8 @@ import { UniqueComponentsModule } from './unique-components/unique-components.mo
   imports: [
     CommonModule,
     UtilsModule,
-    DashComponentsModule
+    DashComponentsModule,
+    UniqueComponentsModule
 
   ],
   declarations: [IndexDComponent],

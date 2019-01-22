@@ -5,3 +5,12 @@
 td a{
   padding: 3px;
 }
+.checkbox-field{
+  width:36px !important;
+  height: 36px !important;
+}
+
+mz-checkbox-container{
+  width:36px !important;
+  height: 36px !important;
+}

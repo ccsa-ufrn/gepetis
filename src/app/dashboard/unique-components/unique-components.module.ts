@@ -5,11 +5,12 @@ import { NewsSettingsComponent } from './news-settings/news-settings.component';
 import { SubmissionsSettingsComponent } from './submissions-settings/submissions-settings.component';
 import { NewNoticeComponent } from './new-notice/new-notice.component';
 import { NewUserComponent } from './new-user/new-user.component';
-import { UtilsModule } from './../../Utils/utils.module';
+import { UtilsModule } from './../../utils/utils.module';
 import { NewEventComponent } from './new-event/new-event.component'
 @NgModule({
   imports: [
     CommonModule,
+    UtilsModule
     
   ],
   declarations: [UserSettingsComponent, NewsSettingsComponent, SubmissionsSettingsComponent,

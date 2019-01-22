@@ -42,6 +42,7 @@ import { RegisterComponent } from './register/register.component';
 // import { LoginComponent } from './login';
 // import { RegisterComponent } from './register';
 import { AuthGuard } from './_guards/auth.guard';
+import { NewEventComponent } from './dashboard/unique-components/new-event/new-event.component';
 //, canActivate: [AuthGuard]
 const routes: Routes = [
 {
@@ -73,7 +74,7 @@ children: [
   { path: 'editar-sobre', component: EditAboutComponent },
   { path: 'editar-eventos', component: EditEventsComponent,
   children:[
-    { path: 'novo-evento', component: NewNoticeComponent },
+    { path: 'novo-evento', component: NewEventComponent },
     { path: 'editar-evento', component: NewNoticeComponent },
         
   ] },

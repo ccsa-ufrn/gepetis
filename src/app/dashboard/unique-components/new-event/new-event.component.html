@@ -1,3 +1,67 @@
-<p>
-  new-event works!
-</p>
+<div class="row">
+  <h5>Novo Evento</h5>
+</div>
+<div class="row">
+  <div class="col s6">
+    <mz-input-container>
+      <i mz-icon-mdi mz-input-prefix
+        [icon]="'email'">
+      </i>
+      <input mz-input
+        [label]="'Tema'"
+        [validate]="true"
+        [dataError]="'Titulo inválido'"
+        [dataSuccess]="'Email is valid'"
+        id="title-news"
+        placeholder=""
+        length='150'
+        type="text">
+    </mz-input-container>
+  </div>
+  <div class="col s6 insideMenu">
+    <div class="row">
+      <div class="col s4"> 
+        <mz-radio-button-container>
+          <input class="importantButtonClass" mz-radio-button
+            [label]="'Atual'"
+            id="importantButton"
+            name="radio-group"
+            type="radio">
+        </mz-radio-button-container>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s6 datepickers">
+    <mz-datepicker-container class="col s12">
+      <i mz-icon-mdi mz-input-prefix
+        [icon]="'calendar'">
+      </i>
+      <input mz-datepicker
+        [label]="'Date of birth'"
+        id="datepicker"
+        placeholder="Selecione data de Inicio"
+        type="text">
+    </mz-datepicker-container>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s6 datepickers">
+    <mz-datepicker-container class="col s12">
+      <i mz-icon-mdi mz-input-prefix
+        [icon]="'calendar'">
+      </i>
+      <input mz-datepicker
+        [label]="'Date of birth'"
+        id="datepicker"
+        placeholder="Selecione data do Fim do Evento"
+        type="text">
+    </mz-datepicker-container>
+  </div>
+</div>
+
+<div class="row center">
+  <a mz-button>Criar</a>
+</div>

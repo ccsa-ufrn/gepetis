@@ -8,12 +8,15 @@ import { MzIconMdiModule } from 'ngx-materialize'//input
 import { MzSelectModule } from 'ngx-materialize' //select
 import { MzRadioButtonModule } from 'ngx-materialize' //radio button
 import { MzModalModule } from 'ngx-materialize' //modal
+import { MzCheckboxModule } from 'ngx-materialize'
+
+
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditorModule } from '@tinymce/tinymce-angular';// mde editor de texto grande
 import { FormsModule } from '@angular/forms';           // to use in forms
-
 import { ColorPickerModule } from 'node_modules/ngx-color-picker';
+import { MzDatepickerModule } from 'ngx-materialize'
 
 @NgModule({
   imports: [
@@ -29,14 +32,15 @@ import { ColorPickerModule } from 'node_modules/ngx-color-picker';
     ReactiveFormsModule,
     MzModalModule,
     FormsModule,
-    ColorPickerModule
-
+    ColorPickerModule,
+    MzDatepickerModule,
+    MzCheckboxModule
 
 
   ],
   declarations: [],
-  exports:[RouterModule,MzDropdownModule,MzButtonModule,MzInputModule,MzIconMdiModule,
-    MzSelectModule,MzRadioButtonModule,EditorModule, ReactiveFormsModule,MzModalModule,FormsModule,
-    ColorPickerModule]
+  exports:[RouterModule, MzDropdownModule, MzButtonModule, MzInputModule, MzIconMdiModule,
+    MzSelectModule, MzRadioButtonModule, EditorModule, ReactiveFormsModule, MzModalModule, FormsModule,
+    ColorPickerModule, MzDatepickerModule, MzCheckboxModule]
 })
 export class UtilsModule { }
