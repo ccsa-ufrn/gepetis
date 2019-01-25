@@ -10,7 +10,7 @@ import { MzRadioButtonModule } from 'ngx-materialize' //radio button
 import { MzModalModule } from 'ngx-materialize' //modal
 import { MzCheckboxModule } from 'ngx-materialize'
 
-
+import { NgxPrettyCheckboxModule } from 'ngx-pretty-checkbox';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditorModule } from '@tinymce/tinymce-angular';// mde editor de texto grande
@@ -34,13 +34,12 @@ import { MzDatepickerModule } from 'ngx-materialize'
     FormsModule,
     ColorPickerModule,
     MzDatepickerModule,
-    MzCheckboxModule
-
-
+    MzCheckboxModule,
+    NgxPrettyCheckboxModule
   ],
   declarations: [],
   exports:[RouterModule, MzDropdownModule, MzButtonModule, MzInputModule, MzIconMdiModule,
     MzSelectModule, MzRadioButtonModule, EditorModule, ReactiveFormsModule, MzModalModule, FormsModule,
-    ColorPickerModule, MzDatepickerModule, MzCheckboxModule]
+    ColorPickerModule, MzDatepickerModule, MzCheckboxModule, NgxPrettyCheckboxModule,  ]
 })
 export class UtilsModule { }

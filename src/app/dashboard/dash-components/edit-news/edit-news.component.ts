@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit,  } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router'
 class Notice {
   Title:any;
   Data: any;
@@ -12,24 +13,36 @@ class Notice {
   templateUrl: './edit-news.component.html',
   styleUrls: ['./edit-news.component.css']
 })
-export class EditNewsComponent implements OnInit {
+export class EditNewsComponent implements AfterViewInit {
+  
   News: Array<any> = [];
   Actioned = false;
+  Erease = false;
   importantNotice = true;
-  constructor() { }
+  constructor( private http: HttpClient, private route: ActivatedRoute) { }
   actionPage(){
     this.Actioned = true;
   }
   selectAll(){
-    this.News.map(notice => {
-      notice.checked =  true
-      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      checkboxes.forEach =  notice.checked;
+    let checkboxes =document.querySelectorAll('input');
+    for (let e=0;e<checkboxes.length;e++) {
+      checkboxes[e].checked = true
     }
-      )
-
+      this.Erease = true;
   }
-  ngOnInit() {
+  unselectAll(){
+    let checkboxes =document.querySelectorAll('input');
+    for (let e=0;e<checkboxes.length;e++) {
+      checkboxes[e].checked = false
+    }
+      this.Erease = false;
+  }
+  exception(){
+    this.route.params.subscribe(params => {console.log(params);});
+    this.route.queryParams.subscribe(qParams => {console.log(qParams);});
+  }
+  ngAfterViewInit() {
+    this.exception()
     for(let i = 0 ; i< 5 ; i++){
       let aux = {
         Title : i,
