@@ -43,7 +43,7 @@
     <a mz-button class="orange accent-4" routerLink="nova-noticia" (click)="actionPage()">Nova Noticia</a>
     <a mz-button (click)="selectAll()">Selecionar Todos</a>
     <a mz-button *ngIf="Erease" (click)="unselectAll()">Deselecionar</a>
-    <a mz-button *ngIf="Erease" class="red accent-4" (click)="unselectAll()">Apagar</a>
+    <a mz-button *ngIf="Erease" class="red accent-4" (click)="removeNotice()">Apagar</a>
 
   </div>
 </div>
@@ -66,7 +66,7 @@
                     <td></td>
                     <td class="center">
                     <a class="userAction" routerLink="editar-noticia" (click)="actionPage()"><img src="./assets/settings.png" height="24px"></a>
-                    <a class="userAction" ><img src="./assets/delete.png" height="24px"></a>
+                    <!--<a class="userAction" ><img src="./assets/delete.png" height="24px"></a> -->
                     <a class="userAction"  *ngIf="notice .important == true"><img src="./assets/important-news-selected.png" height="24px"></a>    
                    </td>
                    <td>
@@ -76,9 +76,9 @@
                             type="checkbox"
                             name="checkbox"
                             filledIn="true"
+                            (click)="clicked()"
                             >
                         </mz-checkbox-container>
-
                    </td>
                   </tr>
               </table>

@@ -37,37 +37,29 @@
                   <tr>
                       <th>Nome Usuario</th>
                       <th class="center">Açoes</th>
+
                   </tr>
                 </thead>
 
                 <tbody>
-                  <tr>
-                    <td>Alvin Eos Esquilos</td>
+                  <tr *ngFor="let user of Users; let i = index">
+                    <td>{{user.name}}</td>
 
                     <td class="center">
                     <a class="userAction" href=""><img src="./assets/settings.png" height="24px"></a>
-                    <a class="userAction" href=""><img src="./assets/delete.png" height="24px"></a>
+                   <!--<a class="userAction" href=""><img src="./assets/delete.png" height="24px"></a> --> 
                     <a class="userAction" href=""><img src="./assets/view.png" height="24px"></a>
-
-                    
                    </td>
-                  </tr>
-                  <tr>
-                    <td>Alan Turing Pai da Aviação</td>
-                    <td class="center">
-                        <a class="userAction" href=""><img src="./assets/settings.png" height="24px"></a>
-                        <a class="userAction" href=""><img src="./assets/delete.png" height="24px"></a>
-                        <a class="userAction" href=""><img src="./assets/view.png" height="24px"></a>
-
-                       </td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan Did Doe</td>
-                    <td class="center">
-                        <a class="userAction" routerLink="editar:userId" (click)="editUser()"><img src="./assets/settings.png" height="24px"></a>
-                        <a class="userAction" href=""><img src="./assets/delete.png" height="24px"></a>
-                        <a class="userAction" href=""><img src="./assets/view.png" height="24px"></a>
-                       </td>
+                   <td> 
+                     <mz-checkbox-container>
+                        <input mz-checkbox
+                            id="{{i}}"
+                           type="checkbox"
+                           name="checkbox"
+                           filledIn="true"
+                      >
+                    </mz-checkbox-container>
+                  </td>
                   </tr>
                 </tbody>
               </table>

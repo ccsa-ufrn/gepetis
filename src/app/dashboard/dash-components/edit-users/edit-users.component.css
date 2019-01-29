@@ -25,3 +25,6 @@ table td{
 .userAction{
   padding: 3x;
 }
+td a img{
+  margin:3px
+}

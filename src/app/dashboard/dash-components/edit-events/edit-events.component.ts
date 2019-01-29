@@ -7,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditEventsComponent implements OnInit {
   Actioned : boolean;
+  Events: Array<any>=[]
   constructor() { }
   actionPage(){
     this.Actioned = true;
   }
   ngOnInit() {
+    for(let i = 0 ; i< 5 ; i++){
+      let aux = {
+      name: 'Alvin Eos Esquilos',
+      data: '10/08/2018'
+      }
+    if(i == 1){
+      //aux.important= true
+    }
+    this.Events.push(aux);
+
+    }
   }
 
 }
