@@ -31,6 +31,11 @@ import { EditNewsComponent } from './dashboard/dash-components/edit-news/edit-ne
 
 import { UserSettingsComponent } from './dashboard/unique-components/user-settings/user-settings.component';
 import { NewNoticeComponent } from './dashboard/unique-components/new-notice/new-notice.component';
+import { SubmissionsSettingsComponent } from './dashboard/unique-components/submissions-settings/submissions-settings.component';
+import { SubmissionsDetailsComponent } from './dashboard/unique-components/submissions-details/submissions-details.component';
+
+import { ViewUserComponent } from './dashboard/unique-components/view-user/view-user.component';
+
 
 
 //----------------------
@@ -69,26 +74,33 @@ const routes: Routes = [
 { path: 'painel', component: IndexDComponent,canActivate: [], // need AuthGuard
 children: [
   { path: '', component: CoverComponent },
-  { path: 'editar-submissoes', component: EditSubmissionsComponent},
+  { path: 'editar-submissoes', component: EditSubmissionsComponent,
+  children:[
+  { path: 'nova-submissao', component: SubmissionsSettingsComponent },
+  { path: 'editar', component: SubmissionsSettingsComponent },
+  { path: 'detalhes', component: SubmissionsDetailsComponent },
+
+  ]},
   { path: 'editar-capa', component: EditCoverComponent },
   { path: 'editar-sobre', component: EditAboutComponent },
   { path: 'editar-eventos', component: EditEventsComponent,
   children:[
     { path: 'novo-evento', component: NewEventComponent },
     { path: 'editar-evento', component: NewNoticeComponent },
-        
+
   ] },
   { path: 'editar-users', component: EditUsersComponent,
     children:[
-  { path: 'editar:userId', component: UserSettingsComponent },
-      
+  { path: 'editar', component: UserSettingsComponent },
+  // { path: 'detalhes', component: ViewUserComponent },
+
     ]},
   { path: 'outros', component: EditOthersComponent},
   { path: 'editar-noticias', component: EditNewsComponent,
   children:[
     { path: 'nova-noticia', component: NewNoticeComponent },
     { path: 'editar-noticia', component: NewNoticeComponent },
-        
+
   ]},
 
 

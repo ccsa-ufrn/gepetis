@@ -40,7 +40,9 @@
 </div>
 <div class="row importantButtons center">
   <div class="col s12">
-    <a mz-button class="orange accent-4">Nova Submissão</a>
+    <a mz-button class="orange accent-4"
+    routerLink="nova-submissao"
+    (click)="ActionPage()">Nova Submissão</a>
     <a mz-button>Selecionar Todos</a>
   </div>
 </div>
@@ -48,7 +50,7 @@
     <div class="col s10 offset-s1 grey lighten-4 box">
       <div class="row ">
         <table>
-            <table class=" highlight">
+            <table class=" highlight" *ngIf="!Actioned">
                 <thead>
                   <tr>
                       <th>Titulo</th>
@@ -60,13 +62,13 @@
                 </thead>
 
                 <tbody>
-                  <tr *ngFor="let subs of Submissions">
+                  <tr *ngFor="let subs of Submissions; let i= index">
                     <td>Alvin Eos Esquilos</td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td class="center">
-                    <a class="userAction" href=""><img src="./assets/settings.png" height="24px"></a>
+                    <a class="userAction" routerLink="editar"><img src="./assets/settings.png" height="24px"></a>
                     <!-- <a class="userAction" href=""><img src="./assets/delete.png" height="24px"></a> -->
                   </td>
                    <td>
@@ -84,9 +86,10 @@
                 </tbody>
               </table>
         </table>
+
       </div>
     </div>
-    <app-user-action *ngIf="Actioned === true"></app-user-action>
+    <!-- <app-user-action *ngIf="Actioned === true"></app-user-action> -->
   </div>
 
 

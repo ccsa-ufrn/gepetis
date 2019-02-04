@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditSubmissionsComponent implements OnInit {
   Submissions: Array<any> = [];
-
+  Actioned= false;
   constructor() { }
+  actionPage(){
+    this.Actioned = true;
+  }
 
   ngOnInit() {
     for(let i = 0 ; i< 5 ; i++){
