@@ -8,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class EditSubmissionsComponent implements OnInit {
   Submissions: Array<any> = [];
   Actioned= false;
+  Erease= false;
+
   constructor() { }
   actionPage(){
     this.Actioned = true;
   }
-
+  activeErease(){
+    this.Erease = true
+  }
   ngOnInit() {
     for(let i = 0 ; i< 5 ; i++){
       let aux = {

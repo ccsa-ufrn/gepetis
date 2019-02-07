@@ -44,6 +44,8 @@
     routerLink="nova-submissao"
     (click)="ActionPage()">Nova Submissão</a>
     <a mz-button>Selecionar Todos</a>
+    <a mz-button *ngIf="Erease" class="red accent-4">Apagar</a>
+
   </div>
 </div>
 <div class="row ">
@@ -78,7 +80,7 @@
                           type="checkbox"
                           name="checkbox"
                           filledIn="true"
-                          (click)="clicked()"
+                          (click)="activeErease()"
                           >
                       </mz-checkbox-container>
                  </td>

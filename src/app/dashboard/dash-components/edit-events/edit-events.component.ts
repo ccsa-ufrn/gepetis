@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditEventsComponent implements OnInit {
   Actioned : boolean;
+  Erease: boolean;
   Events: Array<any>=[]
+
   constructor() { }
   actionPage(){
     this.Actioned = true;
+  }
+  activeErease(){
+    this.Erease = true
   }
   ngOnInit() {
     for(let i = 0 ; i< 5 ; i++){
