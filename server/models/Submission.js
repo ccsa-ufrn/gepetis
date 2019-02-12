@@ -21,7 +21,8 @@ const SubmissionSchema = new Schema({
         default: Date.now
     },
     event: {
-      type: String,
+       type: Schema.Types.ObjectId,
+       ref: 'Event'
     },
 
 
